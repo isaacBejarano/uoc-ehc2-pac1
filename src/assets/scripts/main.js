@@ -10,7 +10,9 @@
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
+((title) => {
+  const headTitle = document.getElementById('head-title');
+  const homeTitle = document.getElementById('home-title');
+  headTitle.textContent = title;
+  homeTitle.textContent = title;
+})("Ramen For All");

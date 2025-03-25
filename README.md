@@ -8,6 +8,8 @@ This is the 1.0.0 version.
 
 [Node.js](http://nodejs.org/) >= 18.x
 
+Its version is enforced thanks to the `.npmrc` file and the `engines/node` key present in the **package.json** file. Keep it in mind if you update your packages to major versions of **Node.js**.
+
 ## Getting started
 
 Clone this repository with `git clone`, or download a .zip file using the top right green button.

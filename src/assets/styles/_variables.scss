@@ -9,4 +9,4 @@ $uoc-corporate: #000078;
 $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
-$mqMinWidth: 420px;
+$mqMinWidth: 420px; // FIXME: camelCase

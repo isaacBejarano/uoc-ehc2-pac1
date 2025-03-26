@@ -1,30 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<HTML>
+<html lang="eng">
 
-<heaD>
+<head>
   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-  <title id="head-title"></title>
-  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+              <meta name="viewport" content="width=device-width">
+  <title id="js-head-title"></title>
+  <link type="text/css" href="./assets/styles/main.scss" rel="stylesheet">
 </head>
-
-
-
 
 <body>
   <input type="checkbox" checked="true">
-  <!-- FIXME: -->
-  <lolLOL></lolLOL>
 
   <div class="uocContainer">
     <picture>
-      <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-      <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya"        class="uoc-logo" />
+      <source type="image/webp" srcset="./assets/images/logo.png?as=webp&width=350">
+      <img class="uoc-logo" src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya">
     </picture>
 
     <h1 class="uoc-title">
-      <span id="home-title"></span>
+      <span id="js-home-title"></span>
       <i class="fa-solid fa-user"></i>
     </h1>    
 
@@ -37,7 +32,7 @@
 
   <include src="./views/footer.html"></include>
 
-  <script type="module" src="./assets/scripts/main.js"></script>
+  <script src="./assets/scripts/main.js" type="module"></script>
 </body>
 
-</HTML>
+</html>

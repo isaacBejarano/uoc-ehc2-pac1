@@ -11,8 +11,8 @@
  */
 
 ((title) => {
-  const headTitle = document.getElementById('head-title');
-  const homeTitle = document.getElementById('home-title');
+  const headTitle = document.getElementById('js-head-title');
+  const homeTitle = document.getElementById('js-home-title');
   headTitle.textContent = title;
   homeTitle.textContent = title;
 })("Ramen For All");

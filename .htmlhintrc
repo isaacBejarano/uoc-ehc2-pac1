@@ -1,0 +1,10 @@
+{
+	"title-require": false,
+	"attr-lowercase": true,
+	"tagname-lowercase": true,
+	"attr-value-double-quotes": true,
+	"empty-tag-not-self-closed": true,
+	"doctype-html5": true,
+	"html-lang-require":true,
+	"attr-sorted":true
+}

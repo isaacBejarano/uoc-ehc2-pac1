@@ -1,3 +1,7 @@
+////
+// STYLELINT
+////
+
 // "stylelint-config-recess-order",
 // body {
 // 	// visual
@@ -118,3 +122,20 @@
 
 // declaration-block-single-line-max-declarations
 // a { top: 3px; color: pink; }
+
+////
+// PRETTIER
+////
+
+// semicolon
+// a {
+//   color: red;
+// }
+
+a,
+p,
+div {
+  box-shadow:
+    0 1px 2px #cccccc,
+    inset 0 1px 0 #ffffff;
+}

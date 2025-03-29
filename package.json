@@ -1,6 +1,6 @@
 {
   "name": "uoc-ehc2-pac1",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": false,
   "description": "Vanilla web page of the Ramen Recipe; bundled with Parcel and styled with SASS with Stylelint linting.",
   "scripts": {

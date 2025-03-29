@@ -20,14 +20,3 @@
   headTitle.textContent = title;
   homeTitle.textContent = title;
 })("Ramen For All");
-
-////
-// Tooglers
-////
-
-(toggleCollapsable = (target) => {
-  if(target) {
-    const collapsable = document.getElementById(target);
-    collapsable.classList.toggle('d-none');
-  }
-})();

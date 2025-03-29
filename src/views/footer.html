@@ -1,3 +1,10 @@
+<script>
+  function toggleShowFooterRefs() {
+    const collapsable = document.getElementById('js-collapsable-footer-refs');
+    collapsable.classList.toggle('d-none');  
+  }
+</script>
+
 <footer class="area-footer grid-list-cols-2 align-items-center p-1 shadow-sm">
   <div class="d-flex flex-col flex-center-center"> 
     <p> Isaac Bejarano, 2025  </p>
@@ -9,7 +16,7 @@
     <img src="./assets/images/uoc.png?as=webp" alt="ramen 1" width="174" height="45">  
   </div>
   <div>
-    <button class="btn btn-icon d-flex mx-auto mb-1 bg-light radius-sm" onclick="toggleCollapsable('js-collapsable-footer-refs')">
+    <button class="btn btn-icon d-flex mx-auto mb-1 bg-light radius-sm" onclick="toggleShowFooterRefs()">
       <p class="color-dark mr-05"> <b> Referencias </b> </p>
       <i class="fa-solid fa-asterisk"></i> 
     </button>

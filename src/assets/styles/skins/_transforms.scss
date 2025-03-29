@@ -1,0 +1,48 @@
+@use "../variables" as vars;
+
+////
+// ON HOVER TRANSFORMS
+////
+
+@mixin hover-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin hover-inset-shadow {
+  &:hover {
+    box-shadow: inset 0 1px 3px rgba(vars.$color-dark, 0.5);
+  }
+}
+
+.hover {
+  // FX
+  &-tilt {
+    &:hover {
+      transform: rotate(3deg);
+    }
+  }
+
+  &-cursor {
+    @include hover-pointer;
+  }
+
+  &-inset-shadow {
+    @include hover-inset-shadow;
+  }
+}
+
+////
+// ON ACTIVE TRANSFORMS
+////
+
+@mixin active-inset-shadow {
+  &:active {
+    box-shadow: inset 0 1px 3px rgba(vars.$color-dark, 0.5);
+  }
+}
+
+////
+// 
+////

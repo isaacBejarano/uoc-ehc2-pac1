@@ -1,0 +1,35 @@
+////
+// FONT
+////
+
+.f-primary {
+  font-family: "AlegreyaSans", sans-serif;
+  font-weight: 400;
+}
+
+.f-accent {
+  font-family: "AlegreyaSans", sans-serif;
+  font-weight: 700;
+}
+
+.f-sm {
+  font-size: small;
+}
+
+.f-lg {
+  font-size: large;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.f-bold {
+  font-weight: bold;
+}
+
+// to override user agent modifications when headings
+// are nested inside articles, asides, navs, sections
+.f-h1 {
+  font-size: 2rem;
+}

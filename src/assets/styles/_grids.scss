@@ -1,0 +1,71 @@
+// ////
+// // 2 Columns
+// ////
+
+// ////
+// // 3 Columns
+// ////
+
+// ////
+// // 5 Columns
+// ////
+
+// // TODO: layout like this
+// // https://cookidoo.mx/recipes/recipe/es-MX/r279865
+
+// // 8 must match maximum number of items
+// // minmax Arg 1 is width of its container
+// .grid-tablet {
+//   display: grid;
+//   // > * {
+//   //   display: block;
+//   // }
+
+//   // phone --> 390px
+//   // divide tablet / phone
+
+//   &.col-1 {
+//     grid-template-columns: repeat(auto-fit, minmax($phone-w, 1fr));
+//     background-color: pink;
+//   }
+
+//   &.col-2 {
+//     grid-template-columns: repeat(
+//       auto-fit,
+//       minmax(($tablet-w/2)-($phone-w + 1px), 1fr)
+//     );
+//     background-color: pink;
+//   }
+
+//   &.col-2 {
+//     grid-template-columns: repeat(auto-fit, minmax(($tablet-w/2)-1px, 1fr));
+//   }
+
+//   &.col-3 {
+//     grid-template-columns: repeat(auto-fit, minmax(($tablet-w/3)-1px, 1fr));
+//   }
+
+//   &.col-5 {
+//     grid-template-columns: repeat(auto-fit, minmax(($tablet-w/5)-1px, 1fr));
+//   }
+// }
+
+// // .grid-col-1-3-3 {
+// //   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+// // }
+
+// // .grid-col-1-2-3 {
+// //   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+
+// //   @media only screen and (min-width: 1920px) {
+// //     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+// //   }
+// // }
+
+// // .grid-col-1-2-4 {
+// //   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+
+// //   @media only screen and (min-width: 1920px) {
+// //     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+// //   }
+// // }

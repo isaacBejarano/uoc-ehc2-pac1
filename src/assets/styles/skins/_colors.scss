@@ -1,0 +1,65 @@
+@use "../variables" as vars;
+
+////
+// COLOR
+////
+
+.color-dark {
+  color: vars.$color-dark;
+}
+
+.color-light {
+  color: vars.$color-light;
+}
+
+.color-gray {
+  color: vars.$color-gray;
+}
+
+.color-accent {
+  color: vars.$color-accent;
+}
+
+@mixin bg-primary {
+  background-color: vars.$color-primary;
+}
+
+.bg-primary {
+  @include bg-primary;
+}
+
+.bg-gray {
+  background-color: vars.$color-gray;
+}
+
+.bg-dark {
+  background-color: vars.$color-dark;
+}
+
+.bg-light-contrast {
+  background-color: vars.$color-light-contrast;
+}
+
+// .bg-dark {
+//   background-color: vars.$color-dark;
+// }
+
+@mixin bg-light {
+  background-color: vars.$color-light;
+}
+
+.bg-light {
+  @include bg-light;
+}
+
+@mixin shadow-sm {
+  box-shadow: 0 1px 3px 0px rgba(vars.$color-dark, 0.5);
+}
+
+@mixin shadow-lg {
+  box-shadow: 0 1px 3px 0px rgba(vars.$color-dark, 0.5);
+}
+
+.shadow-sm {
+  @include shadow-sm;
+}

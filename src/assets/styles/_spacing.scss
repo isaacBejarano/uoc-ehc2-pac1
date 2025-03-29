@@ -1,0 +1,77 @@
+@use "./variables" as vars;
+
+////
+// Margin
+////
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mr-05 {
+  margin-right: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+////
+// Padding
+////
+
+.p-05 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+////
+// Width
+////
+
+.w-100 {
+  width: 100%;
+}
+
+.w-max-tablet {
+  width: 100%;
+  max-width: vars.$tablet-w;
+  margin-left: auto;
+  margin-right: auto;
+  // padding: 1rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,72 +1,192 @@
-// TODO: reset partial
-* {
-  box-sizing: border-box;
+@use "sass:color";
+
+@use "../variables" as vars;
+@use "../positioning";
+@use "../spacing";
+@use "../grids";
+@use "../skins/border";
+@use "../skins/colors";
+@use "../skins/transforms";
+@use "../skins/list";
+@use "../skins/text";
+@use "../components/table";
+@use "../components/btn";
+
+
+////
+// Page: HOME
+////
+
+// images will have max table-h width --> 768px CSS (in Retina x2 --> 1.536px)
+// .w-phone-md {
+//   @media only screen and (min-width: vars.$tablet-h) {
+//     width: vars.$phone-w;
+//   }
+// }
+
+// .w-50-md {
+//   @media only screen and (min-width: vars.$tablet-h) {
+//     width: 50%;
+//   }
+// }
+
+// container
+.w-max100 {
+  max-width: 100%;
 }
 
-body {
-  // pos
-  display: flex;
-  flex-direction: column;
-
-  // box
-  height: 100vh;
-  padding: 2rem;
-  margin: 0;
-
-  // typo
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-
-  // visual
-  color: $uoc-corporate;
-  background-color: $uoc-bg;
-}
-
-.uoc-container {
-  // box
-  max-width: 800px;
-  padding: 2rem;
-  margin: auto;
-
-  // typo
-  text-align: center;
-
-  // visual
-  background-color: #ffffff;
-  border-radius: 2rem;
-  box-shadow:
-    0 4px 6px -1px rgb(246 2 2),
-    0 2px 4px -1px rgb(246 2 2);
-}
-
-.uoc-logo {
-  // box
-  display: block;
-  max-width: 200px;
-  height: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
+// container
+.w-tablet-lg {
+  position: relative;
+  width: 100%;
   margin-left: auto;
+  margin-right: auto;
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+  @media only screen and (min-width: vars.$tablet-w) {
+    max-width: vars.$tablet-w;
   }
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+.d-flex-md {
+  @media only screen and (min-width: vars.$tablet-h) {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+.align-items-center {
+  align-items: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.flex-col-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center-between {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.card {
+  padding: 1rem;
+  @include border.radius-sm;
+
+  &-light {
+    @include colors.shadow-sm;
+    background-color: lighten(vars.$color-light, 5%);
+  }
+
+  > .card-title {
+    min-height: 45px;
+  }
+}
+
+.d-grid {
+  display: grid;
+}
+
+.grid-gap1 {
+  gap: 1rem;
+}
+
+.grid-md-col3 {
+  @media only screen and (min-width: vars.$tablet-h) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// functions
+@function to-rem($num) {
+  @return #{$num}rem;
+}
+
+@function grid-col-size($list-width, $cols, $remainder) {
+  @return calc(calc($list-width / $cols) - $remainder);
+}
+
+// mixins
+@mixin grid-fit($gap, $list-width: 100%, $cols: 1, $remainder) {
+  display: grid;
+  gap: $gap; // extra space
+  $col-size: grid-col-size($list-width, $cols, $remainder);
+  grid-template-columns: repeat(auto-fit, minmax($col-size, 1fr));
+}
+
+// It works for any list, or recursive tree like div nested in div, p in p, etc.
+// Use it with elements without content restriction, i.e. able to
+// contain other block or inline elements. e.g. div, section, article, span
+// Opposite, for example, it won't work with <p>.
+// If the imediate ancestor has more than 7rem padding;
+// or you are increasing "$grid-list-cols-gap",
+// you may need as well to increase "$grid-list-cols-margin" to adjust the "$remainder".
+.grid-list-cols {
+  $grid-list-cols-margin: to-rem(3);
+  $grid-list-cols-gap: to-rem(1);
+  $remainder: calc($grid-list-cols-margin + $grid-list-cols-gap);
+
+  margin: $grid-list-cols-margin;
+
+  @for $i from 1 through 6 {
+    &-#{$i} {
+      @include grid-fit($grid-list-cols-gap, vars.$tablet-w, $i, $remainder);
+    }
+  }
+}
+// .grid-list {
+//   $grid-fit-container-p: to-rem(1);
+//   $grid-fit-gap: to-rem(1);
+//   $grid-fit-remainder: calc($grid-fit-container-p + $grid-fit-gap); // rem!
+
+//   padding: $grid-fit-container-p; // extra space
+
+//   > .grid-list-cols {
+//     &-2 {
+//       @include grid-fit($grid-fit-gap, vars.$tablet-w, 2, $grid-fit-remainder);
+//     }
+
+//     &-5 {
+//       @include grid-fit($grid-fit-gap, vars.$tablet-w, 5, $grid-fit-remainder);
+//     }
+//   }
+// }
+
+////
+// Lists
+////
+
+ul,
+ol,
+dl {
+  list-style: none;
+}
+
+.toolbar-list {
+  line-height: 1;
+
+  > * {
+    display: grid;
+    grid-template-columns: 2rem 1fr 78px;
+    grid-template-rows: 1fr;
+    align-items: center;
+
+    // options
+    .toolbar-thumb {
+      margin-right: 1rem;
+    }
+  }
 }

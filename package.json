@@ -1,17 +1,18 @@
 {
   "name": "uoc-ehc2-pac1",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": false,
   "description": "Vanilla web page of the Ramen Recipe; bundled with Parcel and styled with SASS with Stylelint linting.",
   "scripts": {
     "parcel:serve": "parcel -p 8123 --target web --open",
     "parcel:build": "parcel build --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
-    "start": "npm-run-all clean format lint:html lint:sass parcel:serve",
+    "start": "npm-run-all clean parcel:serve",
     "build": "npm-run-all clean format lint:html lint:sass parcel:build",
     "lint:html": "htmlhint src/**/*.html",
     "lint:sass": "stylelint src/**/*.scss",
     "format": "prettier --write src/**/*.scss",
+    "flint": "npm-run-all format lint:html lint:sass",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
   },
   "targets": {

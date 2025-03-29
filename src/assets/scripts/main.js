@@ -10,9 +10,24 @@
  * Write any other JavaScript below
  */
 
+////
+// Data Injection
+////
+
 ((title) => {
   const headTitle = document.getElementById('js-head-title');
   const homeTitle = document.getElementById('js-home-title');
   headTitle.textContent = title;
   homeTitle.textContent = title;
 })("Ramen For All");
+
+////
+// Tooglers
+////
+
+(toggleCollapsable = (target) => {
+  if(target) {
+    const collapsable = document.getElementById(target);
+    collapsable.classList.toggle('d-none');
+  }
+})();

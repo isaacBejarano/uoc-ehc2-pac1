@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": false,
   "description": "Vanilla web page of the Ramen Recipe; bundled with Parcel and styled with SASS with Stylelint linting.",
+  "source": "src/index.html",
   "scripts": {
     "parcel:serve": "parcel -p 8123 --target web --open",
     "parcel:build": "parcel build --target web --no-source-maps --no-cache",

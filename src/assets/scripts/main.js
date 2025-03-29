@@ -20,3 +20,12 @@
   headTitle.textContent = title;
   homeTitle.textContent = title;
 })("Ramen For All");
+
+
+// (()=> {
+const toggler = () => {
+  const collapsable = document.getElementById('js-collapsable-footer-refs');
+  collapsable.classList.toggle('d-none');  
+}
+globalThis.toggler = toggler;
+// })();

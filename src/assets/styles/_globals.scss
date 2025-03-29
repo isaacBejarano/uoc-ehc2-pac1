@@ -7,14 +7,14 @@
 
 body {
   // layout
-  min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header"
     "main"
     "footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
 
   // text
   font-family: $font-primary;

@@ -49,11 +49,11 @@
 }
 
 @mixin shadow-sm {
-  box-shadow: 0 1px 3px 0px rgba(vars.$color-dark, 0.5);
+  box-shadow: 0 1px 3px 0 rgba(vars.$color-dark, 0.5);
 }
 
 @mixin shadow-lg {
-  box-shadow: 0 1px 3px 0px rgba(vars.$color-dark, 0.5);
+  box-shadow: 0 1px 3px 0 rgba(vars.$color-dark, 0.5);
 }
 
 .shadow-sm {

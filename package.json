@@ -7,7 +7,7 @@
     "parcel:serve": "parcel -p 8123 --target web --open",
     "parcel:build": "parcel build --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
-    "start": "npm-run-all clean parcel:serve",
+    "start": "npm-run-all clean format lint:html lint:sass parcel:serve",
     "build": "npm-run-all clean format lint:html lint:sass parcel:build",
     "lint:html": "htmlhint src/**/*.html",
     "lint:sass": "stylelint src/**/*.scss",

@@ -18,9 +18,9 @@
 
 @mixin grid-fit($gap, $list-width: 100%, $cols: 1, $remainder) {
   display: grid;
-  gap: $gap; // extra space
   $col-size: grid-col-size($list-width, $cols, $remainder);
   grid-template-columns: repeat(auto-fit, minmax($col-size, 1fr));
+  gap: $gap; // extra space
 }
 
 // Classes

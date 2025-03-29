@@ -22,13 +22,13 @@
   color: $color-primary-contrast;
 
   &:hover {
-    color: lighten($color-primary-contrast, 5%);
-    background-color: lighten($color-primary, 10%);
+    color: color.adjust($color-primary-contrast, $lightness: 5%);
+    background-color: color.adjust($color-primary, $lightness: 10%);
   }
 
   &:active {
-    color: lighten($color-primary-contrast, 10%);
-    background-color: lighten($color-primary, 15%);
+    color: color.adjust($color-primary-contrast, $lightness: 10%);
+    background-color: color.adjust($color-primary, $lightness: 15%);
   }
 }
 
@@ -36,13 +36,13 @@
   color: $color-light-contrast;
 
   &:hover {
-    color: lighten($color-light-contrast, 5%);
-    background-color: lighten($color-light, 10%);
+    color: color.adjust($color-light-contrast, $lightness: 5%);
+    background-color: color.adjust($color-light, $lightness: 10%);
   }
 
   &:active {
-    color: lighten($color-light-contrast, 10%);
-    background-color: lighten($color-light, 15%);
+    color: color.adjust($color-light-contrast, $lightness: 10%);
+    background-color: color.adjust($color-light, $lightness: 15%);
   }
 }
 

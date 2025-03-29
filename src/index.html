@@ -1,30 +1,24 @@
 <!doctype html>
-
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title id="js-head-title"></title>
   <link type="text/css" href="./assets/styles/main.scss" rel="stylesheet">
-  <link rel="icon" type="image/png" href="./assets/images/favicon_x2.png?as=webp">
+  <link type="image/png" href="./assets/images/favicon_x2.png?as=webp"  rel="icon" >
 </head>
-
-<!-- FIXME: Vuelve a poner format i linters en el script start.
-Los quité porque paraba de compilar constantemente 
-usa el script "flint" en su lugar
-TODO: documéntalos
--->
 
 <body class="bg-light">
   <!-- grid area: area-header -->
   <header class="area-header bg-primary mb-1 p-1 shadow-sm">
-    <div class="w-tablet-lg d-flex flex-col-center-between">
-      <div class="d-flex flex-col-center-between">
-        <img src="./assets/images/favicon_x2.png?as=webp" alt="logo de Ramen For All" class="p-05" width="90" height="90">
-        <span id="js-home-title" class="color-light mx-1 f-h1"></span>
+    <div class="w-tablet-lg d-flex flex-1 flex-wrap flex-center-between">
+      <div class="d-flex flex-1 flex-wrap flex-align-center">
+        <img class="p-05" src="./assets/images/favicon_x2.png?as=webp" alt="Logo de Ramen For All" width="90" height="90">
+        <span class="color-light mx-1 f-h1" id="js-home-title"></span>
       </div>
-      <nav>
-        <ul class="d-flex color-light">
+      <nav class="">
+        <ul class="d-flex flex-center-end color-light">
           <li class="ml-1">
             <button class="btn btn-icon bg-primary radius-circle" onclick="alert('En construcción')">
               <i class="fa-solid fa-user"></i> 
@@ -50,7 +44,7 @@ TODO: documéntalos
     <article>
       <header class="mb-1 bg-light">
         <div class="d-flex-md w-tablet-lg">
-          <img src="./assets/images/ramen-1_x2.jpg?as=webp" alt="ramen 1" class="flex-1 w-50-md radius-sm radius-xxl-bot-right" width="472" height="308">
+          <img class="flex-1 w-50-md radius-sm radius-xxl-bot-right" src="./assets/images/ramen-1_x2.jpg?as=webp" alt="Ramen clásico"  width="472" height="308">
           <div class="mx-1 p-1 flex-1"> 
             <h1 class="mb-1 f-h1 color-accent">Ramen clásico</h1>
             <i class="fa-solid fa-star"></i> 
@@ -258,34 +252,61 @@ TODO: documéntalos
           <section class="card card-light m-1">
             <h2 class="mb-1 color-accent">Historia</h2>
             <p class="mb-1 f-lg">
-              Los rāmen (ラーメン／拉麺／老麺／柳麺), un plato cuyas primeras versiones se originaron en China, toman su nombre actual de los lamians (拉面 / 拉麺, lā miàn, "fideos estirados"), que son fideos de trigo hechos a mano por el cocinero.
+              Los rāmen (
+              <i lang="ja">ラーメン／拉麺／老麺／柳麺</i>
+              ), un plato cuyas primeras versiones se originaron en China, toman su nombre actual de los lamians (
+              <i lang="zh">拉面 / 拉麺</i>  
+              , lā miàn, "fideos estirados"), que son fideos de trigo hechos a mano por el cocinero.
             </p>
             <p class="mb-1 f-lg">
-              Durante la época de Edo, se dice que el primer japonés en probar los rāmen fue Tokugawa Mitsukuni (1628-1701), señor del clan Mito. Fue introducido a estos fideos por Zhu Zhiyu (1600-1682), un chino exiliado en Japón.
+              Durante la época de Edo, se dice que el primer japonés en probar los rāmen fue Tokugawa Mitsukuni (1628-1701), señor del clan Mito.
+              Fue introducido a estos fideos por Zhu Zhiyu (1600-1682), un chino exiliado en Japón.
             </p>
             <p class="mb-1 f-lg">
-              A finales del siglo XIX y principios del siglo XX (era Meiji), los rāmen fueron importados realmente a Japón por inmigrantes chinos que vivían en el barrio de Yokohama. Fue en Yokohama donde se estableció la primera tienda de rāmen, operada por inmigrantes chinos. Esta tienda ofrecía una sopa con fideos chinos en caldo, acompañados de cerdo asado, brotes de bambú y un huevo duro. En aquel entonces, estos fideos eran conocidos como "soba chino" (中華そば, chūka soba), "soba de China" (支那蕎麦, Shina soba) o "soba de Nankin". Sin embargo, en la actualidad, los rāmen son considerados un plato japonés.
+              A finales del siglo XIX y principios del siglo XX (era Meiji), los rāmen fueron importados realmente a Japón por inmigrantes chinos 
+              que vivían en el barrio de Yokohama. Fue en Yokohama donde se estableció la primera tienda de rāmen, operada por inmigrantes chinos.
+              Esta tienda ofrecía una sopa con fideos chinos en caldo, acompañados de cerdo asado, brotes de bambú y un huevo duro. En aquel entonces,
+              estos fideos eran conocidos como "soba chino" (
+              <i lang="ja">中華そば</i>                
+              , chūka soba), "soba de China" (
+              <i lang="ja">支那蕎麦</i>               
+              , Shina soba) o "soba de Nankin".
+              Sin embargo, en la actualidad, los rāmen son considerados un plato japonés.
             </p> 
             <p class="mb-1 f-lg">
-              En 1900, los restaurantes que servían comida china —de Cantón y Shanghái— ofrecieron un plato de fideos de ramen simple (cortados en vez de separados manualmente), con pocos ingredientes, y un caldo con un sabor de sal y huesos de cerdo.
+              En 1900, los restaurantes que servían comida china —de Cantón y Shanghái— ofrecieron un plato de fideos de ramen simple (cortados en vez de separados manualmente),
+              con pocos ingredientes, y un caldo con un sabor de sal y huesos de cerdo.
             </p>   
             <p class="mb-1 f-lg">
-              En 1910, el restaurante Rairaiken (来々軒) en Asakusa contrató a un chef de origen chino de Yokohama para su inauguración. En aquel entonces, se servían shio rāmen, una variedad de rāmen condimentada con sal. Posteriormente, los japoneses añadieron salsa de soja, dando origen a los shōyu rāmen, que se popularizaron en todo el archipiélago durante la década de 1920. En la década de 1930, los chinos dieron a conocer los rāmen en otras regiones de Japón, como Sapporo, Kitakata o Kurume.
+              En 1910, el restaurante Rairaiken (
+              <i lang="ja">来々軒</i>              
+              ) en Asakusa contrató a un chef de origen chino de Yokohama para su inauguración.
+              En aquel entonces, se servían shio rāmen, una variedad de rāmen condimentada con sal. Posteriormente, los japoneses añadieron salsa de soja,
+              dando origen a los shōyu rāmen, que se popularizaron en todo el archipiélago durante la década de 1920.
+              En la década de 1930, los chinos dieron a conocer los rāmen en otras regiones de Japón, como Sapporo, Kitakata o Kurume.
             </p>   
             <p class="mb-1 f-lg">
-              Muchos chinos que vivían en Japón también montaban puestos de comida portátiles, vendiendo ramen y empanadas gyōza(Jiaozi) a los trabajadores. A mediados de 1900, estos puestos utilizaban un tipo de cuerno musical llamado charumera para anunciar su presencia, una práctica que algunos vendedores todavía mantienen mediante un altavoz y una grabación en bucle.
+              Muchos chinos que vivían en Japón también montaban puestos de comida portátiles, vendiendo ramen y empanadas gyōza(Jiaozi) a los trabajadores.
+              A mediados de 1900, estos puestos utilizaban un tipo de cuerno musical llamado charumera para anunciar su presencia,
+               una práctica que algunos vendedores todavía mantienen mediante un altavoz y una grabación en bucle.
             </p>   
             <p class="mb-1 f-lg">
-              Sin embargo, es tras la II Guerra Mundial cuando el ramen comienza su andadura en Japón. En 1950, se comienza a elaborar en la ciudad de Hokkaidō el Sapporo ramen. Este plato se hizo muy popular y rápidamente la palabra ramen pasó al uso común.
+              Sin embargo, es tras la II Guerra Mundial cuando el ramen comienza su andadura en Japón.
+              En 1950, se comienza a elaborar en la ciudad de Hokkaidō el Sapporo ramen. Este plato se hizo muy popular y rápidamente la palabra ramen pasó al uso común.
             </p>   
             <p class="mb-1 f-lg">
               El 25 de agosto de 1958, Momofuku Andō, fundador y presidente de Nissin Foods, lanzó al mercado japonés el chicken ramen, la primera sopa instantánea de fideos.
             </p>   
             <p class="mb-1 f-lg">
-              Pero es en los años 1980 cuando este plato pasa de ser considerado una mera guarnición a convertirse en una comida normal tanto para gente joven como mayor. Finalmente, a principios de 1990, el ramen experimenta un boom en todo el país, especialmente en las enormes ciudades, que pondrían su nombre como marca local: Hakata (Fukuoka), Kagoshima, Kumamoto, Onomichi, Wakayama, Kitakata, Sapporo, Hakodate, etc. El ramen fue considerado algo más que un capricho gastronómico pasajero y se convirtió en un auténtico fenómeno social e incluso mediático: algunos medios de comunicación llegaron a crear programas dedicados exclusivamente a este plato.
+              Pero es en los años 1980 cuando este plato pasa de ser considerado una mera guarnición a convertirse en una comida normal tanto para gente joven como mayor.
+              Finalmente, a principios de 1990, el ramen experimenta un boom en todo el país, especialmente en las enormes ciudades, que pondrían su nombre como marca local:
+              Hakata (Fukuoka), Kagoshima, Kumamoto, Onomichi, Wakayama, Kitakata, Sapporo, Hakodate, etc.
+              El ramen fue considerado algo más que un capricho gastronómico pasajero y se convirtió en un auténtico fenómeno social e incluso mediático:
+              algunos medios de comunicación llegaron a crear programas dedicados exclusivamente a este plato.
             </p>   
             <p class="mb-1 f-lg">
-              Hoy en día, el ramen se ha integrado con tal fuerza en la gastronomía japonesa que en Taiwán se considera un producto netamente japonés y básico en la dieta de dicho país. Suele consumirse en establecimientos de comida rápida, en puestos ambulantes o en casa, siendo uno de los alimentos más baratos que se pueden conseguir.       
+              Hoy en día, el ramen se ha integrado con tal fuerza en la gastronomía japonesa que en Taiwán se considera un producto netamente japonés y básico en la dieta de dicho país.
+              Suele consumirse en establecimientos de comida rápida, en puestos ambulantes o en casa, siendo uno de los alimentos más baratos que se pueden conseguir.       
             </p>     
           </section>
         </div>
@@ -297,7 +318,7 @@ TODO: documéntalos
           <li>
             <div class="card card-light hover-cursor hover-inset-shadow hover-tilt" onclick="alert('En construcción')">
               <h3 class="card-title">Ramen de Osaka</h3>
-              <img src="./assets/images/ramen-2_x2.jpg?as=webp" alt="ramen 1" class="w-max100" width="154" height="100">  
+              <img class="w-max100" src="./assets/images/ramen-2_x2.jpg?as=webp" alt="Ramen de Osaka"  width="154" height="100">  
               <p class="f-sm">
                 5 <i class="fa-solid fa-star"></i> (112)
               </p>      
@@ -306,7 +327,7 @@ TODO: documéntalos
           <li>
             <div class="card card-light hover-cursor hover-inset-shadow hover-tilt" onclick="alert('En construcción')">
               <h3 class="card-title">Ramen de Okinawa</h3>
-              <img src="./assets/images/ramen-3_x2.jpg?as=webp" alt="ramen 1" class="w-max100" width="154" height="100">  
+              <img class="w-max100" src="./assets/images/ramen-3_x2.jpg?as=webp" alt="Ramen de Okinawa" width="154" height="100">  
               <p class="f-sm">
                 4.5 <i class="fa-regular fa-star-half-stroke"></i> (16)
               </p>             
@@ -315,7 +336,7 @@ TODO: documéntalos
           <li>
             <div class="card card-light hover-cursor hover-inset-shadow hover-tilt" onclick="alert('En construcción')">
               <h3 class="card-title">Ramen con Menta</h3>
-              <img src="./assets/images/ramen-4_x2.jpg?as=webp" alt="ramen 1" class="w-max100" width="154" height="100">  
+              <img class="w-max100" src="./assets/images/ramen-4_x2.jpg?as=webp" alt="Ramen con Menta" width="154" height="100">  
               <p class="f-sm">
                 4 <i class="fa-regular fa-star-half-stroke"></i> (145)
               </p>             
@@ -324,7 +345,7 @@ TODO: documéntalos
           <li>
             <div class="card card-light hover-cursor hover-inset-shadow hover-tilt" onclick="alert('En construcción')">
               <h3 class="card-title">Ramen Mediterraneo</h3>
-              <img src="./assets/images/ramen-5_x2.jpg?as=webp" alt="ramen 1" class="w-max100" width="154" height="100">  
+              <img class="w-max100" src="./assets/images/ramen-5_x2.jpg?as=webp" alt="Ramen Mediterraneo" width="154" height="100">  
               <p class="f-sm">
                 4.5 <i class="fa-regular fa-star-half-stroke"></i> (90)
               </p>             
@@ -333,7 +354,7 @@ TODO: documéntalos
           <li>
             <div class="card card-light hover-cursor hover-inset-shadow hover-tilt" onclick="alert('En construcción')">
               <h3 class="card-title">Ramen de Gambas</h3>
-              <img src="./assets/images/ramen-6_x2.jpg?as=webp" alt="ramen 1" class="w-max100" width="154" height="100">  
+              <img class="w-max100" src="./assets/images/ramen-6_x2.jpg?as=webp" alt="Ramen de Gambas" width="154" height="100">  
               <p class="f-sm">
                 5 <i class="fa-solid fa-star"></i> (51)
               </p>             

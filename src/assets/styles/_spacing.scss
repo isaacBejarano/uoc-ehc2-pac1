@@ -14,13 +14,13 @@
 }
 
 .mx-1 {
-  margin-left: 1rem;
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 .mx-auto {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .my-1 {
@@ -56,8 +56,8 @@
 }
 
 .px-1 {
-  padding-left: 1rem;
   padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 // Width
@@ -75,8 +75,8 @@
 .w-tablet-lg {
   position: relative;
   width: 100%;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 
   @media only screen and (min-width: $tablet-w) {
     max-width: $tablet-w;

@@ -21,16 +21,34 @@
   flex: 1;
 }
 
-.flex-col-center {
+.flex-col {
   flex-direction: column;
-  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-align-center {
   align-items: center;
 }
 
-.flex-col-center-between {
-  flex-wrap: wrap;
-  justify-content: space-between;
+// flex-<align>-<justify>
+.flex-center-center {
   align-items: center;
+  justify-content: center;
+}
+
+// flex-<align>-<justify>
+.flex-center-end {
+  align-items: center;
+  justify-content: end;
+}
+
+// flex-<align>-<justify>
+.flex-center-between {
+  align-items: center;
+  justify-content: space-between;
 }
 
 // used for layout via grid system --> has its container classes in grids.scss

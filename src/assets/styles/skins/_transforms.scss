@@ -1,7 +1,10 @@
 @use "../variables" as vars;
 
 ////
-// ON HOVER TRANSFORMS
+// TRANSFORMS
+////
+
+// On Hover
 ////
 
 @mixin hover-pointer {
@@ -33,8 +36,7 @@
   }
 }
 
-////
-// ON ACTIVE TRANSFORMS
+// On Active
 ////
 
 @mixin active-inset-shadow {
@@ -42,7 +44,3 @@
     box-shadow: inset 0 1px 3px rgba(vars.$color-dark, 0.5);
   }
 }
-
-////
-// 
-////

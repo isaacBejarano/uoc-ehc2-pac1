@@ -3,12 +3,29 @@
  * Do not include SCSS code in this file.
  */
 
-// The order is "font-face" > "variables" > "reset" > "globals"
-// Then use SASS namespaces in whatever pertial yo need it
-@use "font-face";
-@use "variables";
-@use "reset";
-@use "globals";
+// 1. Obligatory Order: "font-face" > "variables" > "reset" > "globals"
+@import "font-face";
+@import "variables";
+@import "reset";
+@import "globals";
+
+// 2. Irrelevant Order: "grids", "positioning", "spacing"
+@import "grids";
+@import "positioning";
+@import "spacing";
+
+// 3. Irrelevant Order: "Skins" (use other partials' namespaces to load functions and mixis)
+@import "./skins/border";
+@import "./skins/colors";
+@import "./skins/list";
+@import "./skins/text";
+@import "./skins/transforms";
+
+// 3. Irrelevant Order: "Components" (use other partials' namespaces to load functions and mixis)
+@import "./components/btn";
+@import "./components/card";
+@import "./components/table";
+@import "./components/toolbar";
 
 /**
  * Import npm dependencies
@@ -25,6 +42,7 @@
  * It's a best practice to use a different partial for each page
  */
 
+// Use Components and Skins to build Pages
 @import "layouts/home";
 
 /**

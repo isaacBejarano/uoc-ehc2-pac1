@@ -5,3 +5,39 @@
 .d-none {
 	display: none;
 }
+
+.d-flex {
+  display: flex;
+}
+
+.d-flex-md {
+  @media only screen and (min-width: $tablet-h) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.flex-1 {
+	flex: 1;
+}
+
+.flex-col-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-col-center-between {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// used for layout via grid system --> has its container classes in grids.scss
+.d-grid {
+  display: grid;
+}
+
+.align-items-center {
+  align-items: center;
+}

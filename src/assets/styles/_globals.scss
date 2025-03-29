@@ -1,6 +1,7 @@
-@use "./variables" as vars;
-
 ////
+// GLOBALS
+////
+
 // Body
 ////
 
@@ -16,7 +17,7 @@ body {
     "footer";
 
     // text
-    font-family: vars.$font-primary;
+    font-family: $font-primary;
 }
 
 .area-header {
@@ -31,8 +32,6 @@ body {
   grid-area: footer;
 }
 
-
-////
 // Headings
 ////
 
@@ -42,11 +41,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: vars.$font-secondary;
+  font-family: $font-secondary;
 }
 
-
-////
 // Paragraph
 ////
 

@@ -1,71 +1,49 @@
-// ////
-// // 2 Columns
-// ////
+////
+// GRID SYSTEM
+////
 
-// ////
-// // 3 Columns
-// ////
+// Functions
+////
 
-// ////
-// // 5 Columns
-// ////
+@function to-rem($num) {
+  @return #{$num}rem;
+}
 
-// // TODO: layout like this
-// // https://cookidoo.mx/recipes/recipe/es-MX/r279865
+@function grid-col-size($list-width, $cols, $remainder) {
+  @return calc(calc($list-width / $cols) - $remainder);
+}
 
-// // 8 must match maximum number of items
-// // minmax Arg 1 is width of its container
-// .grid-tablet {
-//   display: grid;
-//   // > * {
-//   //   display: block;
-//   // }
+// Mixins
+////
 
-//   // phone --> 390px
-//   // divide tablet / phone
+@mixin grid-fit($gap, $list-width: 100%, $cols: 1, $remainder) {
+  display: grid;
+  gap: $gap; // extra space
+  $col-size: grid-col-size($list-width, $cols, $remainder);
+  grid-template-columns: repeat(auto-fit, minmax($col-size, 1fr));
+}
 
-//   &.col-1 {
-//     grid-template-columns: repeat(auto-fit, minmax($phone-w, 1fr));
-//     background-color: pink;
-//   }
+// Classes
+////
 
-//   &.col-2 {
-//     grid-template-columns: repeat(
-//       auto-fit,
-//       minmax(($tablet-w/2)-($phone-w + 1px), 1fr)
-//     );
-//     background-color: pink;
-//   }
+// It works for any list, or recursive tree like div nested in div, p in p, etc.
+// Use it with elements without content restriction, i.e. elements able to
+// contain other block/inline elements. e.g. div, section, article, span, etc.
+// On the other hand, for example, it won't work with <p>.
+// If the inmediate ancestor has more than 7rem padding;
+// or you are increasing "$grid-list-cols-gap",
+// you may need as well to increase "$grid-list-cols-margin" to adjust the "$remainder".
+.grid-list-cols {
+  $grid-list-cols-margin: to-rem(3);
+  $grid-list-cols-gap: to-rem(1);
+  $remainder: calc($grid-list-cols-margin + $grid-list-cols-gap);
 
-//   &.col-2 {
-//     grid-template-columns: repeat(auto-fit, minmax(($tablet-w/2)-1px, 1fr));
-//   }
+  margin: $grid-list-cols-margin;
 
-//   &.col-3 {
-//     grid-template-columns: repeat(auto-fit, minmax(($tablet-w/3)-1px, 1fr));
-//   }
+  @for $i from 1 through 6 {
+    &-#{$i} {
+      @include grid-fit($grid-list-cols-gap, $tablet-w, $i, $remainder);
+    }
+  }
+}
 
-//   &.col-5 {
-//     grid-template-columns: repeat(auto-fit, minmax(($tablet-w/5)-1px, 1fr));
-//   }
-// }
-
-// // .grid-col-1-3-3 {
-// //   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-// // }
-
-// // .grid-col-1-2-3 {
-// //   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
-
-// //   @media only screen and (min-width: 1920px) {
-// //     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-// //   }
-// // }
-
-// // .grid-col-1-2-4 {
-// //   grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
-
-// //   @media only screen and (min-width: 1920px) {
-// //     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-// //   }
-// // }

@@ -1,0 +1,21 @@
+@use "../skins/border";
+@use "../skins/colors";
+
+////
+// COMPONENT: CARD
+////
+
+.card {
+  padding: 1rem;
+  @include border.radius-sm;
+
+  &-light {
+    @include colors.shadow-sm;
+    background-color: lighten($color-light, 5%);
+  }
+
+	// useful for small cards where title may occupy 2 lines
+  > .card-title {
+    min-height: 45px;
+  }
+}

@@ -1,17 +1,15 @@
-@use "../variables" as vars;
-
 ////
-// Component: TABLE
+// COMPONENT: TABLE
 ////
 
 .table-zebra {
   border-collapse: separate;
 
   tr:nth-child(odd) {
-    background-color: rgba(vars.$color-gray, 0.1);
+    background-color: rgba($color-gray, 0.1);
   }
 
   tr:nth-child(even) {
-    background-color: rgba(vars.$color-gray, 0.15);
+    background-color: rgba($color-gray, 0.15);
   }
 }

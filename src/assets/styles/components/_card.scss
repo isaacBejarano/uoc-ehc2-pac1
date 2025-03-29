@@ -14,7 +14,7 @@
     background-color: lighten($color-light, 5%);
   }
 
-	// useful for small cards where title may occupy 2 lines
+  // useful for small cards where title may occupy 2 lines
   > .card-title {
     min-height: 45px;
   }
